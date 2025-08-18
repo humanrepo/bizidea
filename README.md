@@ -1,4 +1,64 @@
-# 🚀 Business Idea Generator
+# Business Idea Generator
+
+## 🚀 Projet
+
+Une plateforme innovante qui utilise l'IA pour générer et valider des idées business.
+
+## 🌟 Fonctionnalités
+
+- 🤖 Génération d'idées business par IA
+- 📊 Validation de marché automatisée
+- 👥 Communauté d'entrepreneurs
+- 📱 Interface responsive et moderne
+- 🌙 Mode sombre / clair
+
+## 🛠️ Technologies
+
+- **Frontend:**
+  - React avec TypeScript
+  - Tailwind CSS
+  - Vite
+  - Framer Motion
+
+- **Backend:**
+  - Python
+  - FastAPI
+  - OpenAI
+  - PostgreSQL
+
+## 🚀 Installation
+
+1. **Clone le repo**
+   ```bash
+   git clone https://github.com/humanrepo/bizidea.git
+   cd bizidea
+   ```
+
+2. **Installation des dépendances**
+   ```bash
+   npm install
+   ```
+
+3. **Lancement en développement**
+   ```bash
+   npm run dev
+   ```
+
+## 🤝 Contribution
+
+Voir [CONTRIBUTING.md](CONTRIBUTING.md) pour les détails sur notre processus de contribution.
+
+## 📚 Documentation
+
+- [Guide de Style](docs/STYLE_GUIDE.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [API Reference](docs/API.md)
+
+## 👥 Équipe
+
+- [@username1](https://github.com/username1) - Frontend Lead
+- [@username2](https://github.com/username2) - Backend Lead
+- [@username3](https://github.com/username3) - UI/UX Designer
 
 **Une plateforme intelligente qui génère des idées business basées sur des besoins réels détectés en ligne**
 
