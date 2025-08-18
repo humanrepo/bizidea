@@ -5,22 +5,34 @@ import {
   Lightbulb,
   Menu,
   X,
-  User,
-  Settings,
+            {isMenuOpen && (
+          <motion.div
+            id="mobile-menu"
+            role="menu"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700"
+            aria-label="Menu mobile"
+          >  Settings,
   LogOut,
   BarChart3,
   Users,
   MessageCircle,
-  Sparkles
+  Sparkles,
+  Sun,
+  Moon
 } from 'lucide-react'
 
 import { useAuthStore } from '@/store/authStore'
 import { cn } from '@/lib/utils'
+import { useTheme } from '@/hooks/useTheme'
 
 const Navbar = () => {
   const location = useLocation()
   const navigate = useNavigate()
   const { user, isAuthenticated, logout } = useAuthStore()
+  const { theme, toggleTheme } = useTheme()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isProfileOpen, setIsProfileOpen] = useState(false)
 
@@ -49,7 +61,11 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+    <nav 
+      className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50"
+      role="navigation"
+      aria-label="Navigation principale"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -57,7 +73,7 @@ const Navbar = () => {
             <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-primary-600 to-secondary-600 rounded-xl">
               <Lightbulb className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold font-heading text-gray-900">
+            <span className="text-xl font-bold font-heading text-gray-900 dark:text-white">
               Business Ideas
             </span>
           </Link>
@@ -73,8 +89,8 @@ const Navbar = () => {
                   className={cn(
                     'flex items-center space-x-2 px-3 py-2 rounded-lg text-sm font-medium transition-colors',
                     isActivePath(item.href)
-                      ? 'text-primary-600 bg-primary-50'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                      ? 'text-primary-600 bg-primary-50 dark:text-primary-400 dark:bg-primary-950/50'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-700/50'
                   )}
                 >
                   {Icon && <Icon className="w-4 h-4" />}
@@ -83,6 +99,19 @@ const Navbar = () => {
               )
             })}
           </div>
+
+          {/* Theme Toggle */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-gray-50 dark:hover:bg-gray-800 transition-colors"
+            aria-label={theme === 'dark' ? 'Passer en mode clair' : 'Passer en mode sombre'}
+          >
+            {theme === 'dark' ? (
+              <Sun className="w-5 h-5" />
+            ) : (
+              <Moon className="w-5 h-5" />
+            )}
+          </button>
 
           {/* Auth Section */}
           <div className="flex items-center space-x-4">
@@ -166,12 +195,15 @@ const Navbar = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-gray-50"
+              className="md:hidden p-2 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+              aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
             >
               {isMenuOpen ? (
-                <X className="w-6 h-6 text-gray-600" />
+                <X className="w-6 h-6 text-gray-600 dark:text-gray-400" />
               ) : (
-                <Menu className="w-6 h-6 text-gray-600" />
+                <Menu className="w-6 h-6 text-gray-600 dark:text-gray-400" />
               )}
             </button>
           </div>
