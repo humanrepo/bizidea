@@ -1,0 +1,53 @@
+# 🎯 Description des changements
+
+## 📝 Résumé
+<!-- Décrivez brièvement les modifications apportées -->
+
+## 🖼 Screenshots
+<!-- Ajoutez des captures d'écran avant/après -->
+
+| Avant | Après |
+|-------|-------|
+| [image] | [image] |
+
+## 🔍 Type de changement
+- [ ] 🎨 Frontend Refactor
+- [ ] 🌙 Dark Mode
+- [ ] ♿️ Accessibilité
+- [ ] 📱 Responsive Design
+- [ ] 🔍 SEO
+- [ ] 📚 Documentation
+
+## Checklist
+### Code Quality
+- [ ] HTML sémantique utilisé (header/nav/main/section/footer)
+- [ ] Classes Tailwind organisées logiquement
+- [ ] Code commenté aux endroits complexes
+
+### Accessibilité
+- [ ] Labels et ARIA utilisés correctement
+- [ ] Navigation au clavier testée
+- [ ] Contrastes vérifiés
+- [ ] Focus visible sur tous les éléments interactifs
+
+### Responsive
+- [ ] Design testé sur mobile
+- [ ] Design testé sur tablette
+- [ ] Design testé sur desktop
+- [ ] Menu hamburger fonctionnel sur mobile
+
+### SEO
+- [ ] Balises title uniques par page
+- [ ] Meta descriptions ajoutées
+- [ ] Images ont des alt pertinents
+- [ ] Hiérarchie des titres (h1-h6) logique
+
+### Dark Mode
+- [ ] Thème sombre implémenté
+- [ ] Persistance du choix utilisateur
+- [ ] Contrastes vérifiés dans les deux modes
+
+### Documentation
+- [ ] README mis à jour
+- [ ] Commentaires de code pertinents
+- [ ] Variables/fonctions bien nommées
