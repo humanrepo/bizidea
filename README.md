@@ -4,7 +4,14 @@
 
 Alimentée par l'IA et le scraping web, cette plateforme aide les entrepreneurs à découvrir, valider et développer des idées business rentables.
 
-## ✨ Fonctionnalités
+## ✨ Nouveautés (Frontend)
+
+### 🎨 Interface améliorée
+- HTML5 sémantique optimisé pour l'accessibilité
+- Dark/Light mode persistant avec localStorage
+- Menu hamburger responsive avec focus trap
+- SEO optimisé (meta tags, structure)
+- Performance optimisée (images lazy, CSS minimal)
 
 ### 🧠 Générateur d'idées IA
 - Génération d'idées basées sur des besoins réels détectés en ligne
