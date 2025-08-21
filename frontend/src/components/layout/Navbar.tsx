@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -13,13 +13,15 @@ import {
   Sparkles,
   Sun,
   Moon,
-  User
+  User,
+  Brain
 } from 'lucide-react'
 
 import { useAuthStore } from '@/store/authStore'
 import { cn } from '@/lib/utils'
 import { useTheme } from '@/hooks/useTheme'
 import { Button } from '@/components/ui/Button'
+import { trapFocus, KEYS } from '@/lib/a11y'
 
 const Navbar = () => {
   const location = useLocation()
@@ -28,6 +30,8 @@ const Navbar = () => {
   const { theme, toggleTheme } = useTheme()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isProfileOpen, setIsProfileOpen] = useState(false)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
 
   const navigation = [
     { name: 'Accueil', href: '/', icon: null },
@@ -52,6 +56,45 @@ const Navbar = () => {
     }
     return location.pathname.startsWith(path)
   }
+
+  // Focus trap for mobile menu
+  useEffect(() => {
+    if (isMenuOpen && mobileMenuRef.current) {
+      const focusTrap = trapFocus(mobileMenuRef.current)
+      focusTrap.enable()
+
+      const handleEscape = (e: KeyboardEvent) => {
+        if (e.key === KEYS.ESC) {
+          setIsMenuOpen(false)
+          menuButtonRef.current?.focus()
+        }
+      }
+
+      document.addEventListener('keydown', handleEscape)
+
+      return () => {
+        focusTrap.disable()
+        document.removeEventListener('keydown', handleEscape)
+      }
+    }
+  }, [isMenuOpen])
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (isMenuOpen && mobileMenuRef.current && !mobileMenuRef.current.contains(e.target as Node)) {
+        setIsMenuOpen(false)
+      }
+    }
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isMenuOpen])
 
   return (
     <nav 
