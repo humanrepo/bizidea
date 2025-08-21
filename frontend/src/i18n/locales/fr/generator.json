@@ -1,0 +1,25 @@
+{
+  "title": "Générateur d'Idées d'Affaires",
+  "subtitle": "Répondez à quelques questions et laissez notre IA créer des idées personnalisées pour vous",
+  "form": {
+    "industry": "Industrie",
+    "budget": "Budget",
+    "skills": "Compétences",
+    "experience": "Expérience",
+    "location": "Localisation",
+    "timeCommitment": "Engagement de Temps"
+  },
+  "results": {
+    "title": "Idées Générées",
+    "loading": "Génération de vos idées personnalisées...",
+    "noResults": "Aucune idée trouvée. Essayez avec d'autres critères.",
+    "saveIdea": "Sauvegarder l'idée",
+    "viewDetails": "Voir les détails"
+  },
+  "budgetOptions": {
+    "low": "Moins de 1000€",
+    "medium": "1000€ - 5000€",
+    "high": "5000€ - 10000€",
+    "veryHigh": "Plus de 10000€"
+  }
+}

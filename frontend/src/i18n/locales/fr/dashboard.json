@@ -1,0 +1,13 @@
+{
+  "title": "Tableau de Bord",
+  "welcome": "Bienvenue, {{name}}",
+  "stats": {
+    "totalIdeas": "Idées Totales",
+    "completedIdeas": "Idées Complétées",
+    "pendingIdeas": "Idées en Attente",
+    "successRate": "Taux de Réussite"
+  },
+  "recentIdeas": "Idées Récentes",
+  "noIdeas": "Aucune idée pour le moment. Commencez à créer !",
+  "createIdea": "Créer une Nouvelle Idée"
+}

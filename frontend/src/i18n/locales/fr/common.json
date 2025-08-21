@@ -1,0 +1,37 @@
+{
+  "app": {
+    "name": "Générateur d'Idées d'Affaires",
+    "tagline": "Transformez vos idées en réussites entrepreneuriales",
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "retry": "Réessayer",
+    "save": "Sauvegarder",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "create": "Créer",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Envoyer",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier"
+  },
+  "navigation": {
+    "home": "Accueil",
+    "dashboard": "Tableau de bord",
+    "generator": "Générateur",
+    "profile": "Profil",
+    "settings": "Paramètres",
+    "logout": "Déconnexion",
+    "login": "Connexion",
+    "register": "Inscription"
+  },
+  "errors": {
+    "network": "Erreur de connexion réseau",
+    "server": "Erreur serveur",
+    "validation": "Erreur de validation",
+    "unauthorized": "Non autorisé",
+    "notFound": "Page non trouvée"
+  }
+}

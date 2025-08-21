@@ -1,0 +1,28 @@
+{
+  "hero": {
+    "title": "Transformez Vos Idées en Entreprises Prospères",
+    "subtitle": "Notre IA avancée analyse le marché et génère des idées d'affaires personnalisées adaptées à vos compétences et objectifs",
+    "cta": "Commencer Gratuitement",
+    "ctaSecondary": "En Savoir Plus"
+  },
+  "features": {
+    "title": "Fonctionnalités Puissantes",
+    "aiAnalysis": {
+      "title": "Analyse IA Avancée",
+      "description": "Notre intelligence artificielle analyse les tendances du marché et vos préférences pour générer des idées pertinentes"
+    },
+    "marketResearch": {
+      "title": "Étude de Marché",
+      "description": "Obtenez des insights détaillés sur votre marché cible, la concurrence et les opportunités"
+    },
+    "businessPlan": {
+      "title": "Plan d'Affaires",
+      "description": "Générez automatiquement des plans d'affaires complets avec projections financières"
+    }
+  },
+  "stats": {
+    "users": "Utilisateurs Actifs",
+    "ideas": "Idées Générées",
+    "success": "Entreprises Lancées"
+  }
+}
