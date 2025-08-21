@@ -41,19 +41,90 @@
                 extend: {
                     fontFamily: {
                         sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Poppins', 'system-ui', 'sans-serif'],
                     },
                     colors: {
                         primary: {
                             50: '#f0f9ff',
                             100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
                             500: '#0ea5e9',
                             600: '#0284c7',
                             700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
                         },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        accent: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            200: '#a7f3d0',
+                            300: '#6ee7b7',
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            800: '#065f46',
+                            900: '#064e3b',
+                        }
                     },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-in-out',
+                        'slide-up': 'slideUp 0.5s ease-out',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
                 },
             },
         }
+    </script>
+    
+    <!-- Poppins Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Business Idea Generator",
+        "description": "Générateur d'idées business alimenté par l'IA pour entrepreneurs",
+        "url": "https://business-idea-generator.com",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Business Idea Generator",
+            "url": "https://business-idea-generator.com"
+        }
+    }
     </script>
     
     <!-- Dark Mode Init -->
@@ -120,27 +191,111 @@
     <!-- Main Content -->
     <main id="main-content" class="flex-grow">
         <!-- Hero Section -->
-        <section class="relative overflow-hidden bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
-                <div class="text-center">
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+        <section class="relative overflow-hidden bg-gradient-to-b from-gray-50 via-white to-primary-50 dark:from-gray-900 dark:via-gray-800 dark:to-primary-900" aria-labelledby="hero-title">
+            <!-- Background Pattern -->
+            <div class="absolute inset-0 opacity-10 dark:opacity-20">
+                <div class="absolute inset-0 bg-[radial-gradient(#0ea5e9_1px,transparent_1px)] [background-size:16px_16px]"></div>
+            </div>
+            
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+                <div class="text-center animate-fade-in">
+                    <div class="inline-block mb-4 px-4 py-1.5 bg-primary-100 dark:bg-primary-900 rounded-full">
+                        <p class="text-sm font-semibold text-primary-600 dark:text-primary-300 animate-pulse-slow">
+                            Propulsé par l'IA de dernière génération 🚀
+                        </p>
+                    </div>
+                    
+                    <h1 id="hero-title" class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 animate-slide-up [text-wrap:balance]">
                         Trouvez votre prochaine 
-                        <span class="text-primary-600 dark:text-primary-500">idée business</span>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400">idée business</span>
                         <br>avec l'aide de l'IA
                     </h1>
-                    <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8">
-                        Notre intelligence artificielle analyse les tendances et besoins du marché pour vous suggérer des opportunités business inexploitées.
+                    
+                    <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 animate-slide-up [text-wrap:balance] delay-100">
+                        Notre intelligence artificielle analyse les tendances et besoins du marché pour vous suggérer des opportunités business inexploitées avec une précision inégalée.
                     </p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4">
-                        <a href="/generer" class="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary-600 hover:bg-primary-700 transition-colors">
+                    
+                    <div class="flex flex-col sm:flex-row justify-center gap-4 animate-slide-up delay-200">
+                        <a href="/generer" 
+                           class="group inline-flex justify-center items-center px-6 py-3 text-base font-medium rounded-lg text-white bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-300 transform hover:scale-105" 
+                           aria-label="Commencer à générer des idées business">
                             Générer une idée
-                            <svg class="ml-2 -mr-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="ml-2 -mr-1 w-5 h-5 transition-transform duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                             </svg>
                         </a>
-                        <a href="#comment-ca-marche" class="inline-flex justify-center items-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-lg text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
+                        <a href="#comment-ca-marche" 
+                           class="group inline-flex justify-center items-center px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-base font-medium rounded-lg text-gray-700 dark:text-gray-300 bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm hover:bg-white dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-300">
                             Comment ça marche ?
+                            <svg class="ml-2 -mr-1 w-5 h-5 opacity-0 transition-all duration-300 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
                         </a>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">Ils nous font confiance</p>
+                        <div class="flex flex-wrap justify-center gap-8 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                            <img src="/assets/images/partners/partner1.svg" alt="" class="h-8" aria-hidden="true">
+                            <img src="/assets/images/partners/partner2.svg" alt="" class="h-8" aria-hidden="true">
+                            <img src="/assets/images/partners/partner3.svg" alt="" class="h-8" aria-hidden="true">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why HumanOS Section -->
+        <section id="pourquoi-humanos" class="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-primary-50 dark:from-gray-900 dark:to-gray-800" aria-labelledby="why-title">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 id="why-title" class="font-display text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 mb-4">
+                        Pourquoi choisir HumanOS ?
+                    </h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 [text-wrap:balance]">
+                        Notre mission est de révolutionner la façon dont les entrepreneurs découvrent et valident leurs idées business.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+                    <div class="relative group">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
+                        <div class="relative p-6 bg-white dark:bg-gray-800 rounded-xl">
+                            <div class="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Innovation Continue</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Notre IA apprend en continu des dernières tendances et succès du marché pour vous proposer des idées toujours plus pertinentes.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
+                        <div class="relative p-6 bg-white dark:bg-gray-800 rounded-xl">
+                            <div class="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Communauté Active</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Rejoignez une communauté dynamique d'entrepreneurs qui partagent leurs expériences et s'entraident.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative group">
+                        <div class="absolute -inset-0.5 bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-300"></div>
+                        <div class="relative p-6 bg-white dark:bg-gray-800 rounded-xl">
+                            <div class="mb-4 inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-400">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Validation Rigoureuse</h3>
+                            <p class="text-gray-600 dark:text-gray-300">Nos algorithmes analysent chaque idée sous tous les angles pour maximiser vos chances de succès.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -212,41 +367,108 @@
                 </div>
             </div>
         </section>
+
+        <!-- Roadmap Section -->
+        <section id="roadmap" class="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-white to-primary-50 dark:from-gray-900 dark:to-primary-900/20" aria-labelledby="roadmap-title">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 id="roadmap-title" class="font-display text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 mb-4">
+                        Notre Vision
+                    </h2>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto [text-wrap:balance]">
+                        Découvrez notre feuille de route pour révolutionner la façon dont les entrepreneurs développent leurs idées.
+                    </p>
+                </div>
+
+                <div class="relative">
+                    <!-- Timeline Line -->
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-500 to-accent-500"></div>
+
+                    <!-- Timeline Items -->
+                    <div class="space-y-12">
+                        <!-- Q3 2025 -->
+                        <div class="relative group">
+                            <div class="flex items-center mb-4">
+                                <div class="flex-1 text-right pr-8">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Q3 2025</h3>
+                                    <p class="text-primary-600 dark:text-primary-400">En cours</p>
+                                </div>
+                                <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white dark:bg-gray-800 rounded-full border-4 border-primary-500 group-hover:scale-150 transition-transform duration-300"></div>
+                                <div class="flex-1 pl-8">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Lancement de l'IA avancée</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Algorithmes de nouvelle génération pour des suggestions encore plus pertinentes.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q4 2025 -->
+                        <div class="relative group">
+                            <div class="flex items-center mb-4">
+                                <div class="flex-1 text-right pr-8">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Q4 2025</h3>
+                                    <p class="text-secondary-600 dark:text-secondary-400">À venir</p>
+                                </div>
+                                <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white dark:bg-gray-800 rounded-full border-4 border-secondary-500 group-hover:scale-150 transition-transform duration-300"></div>
+                                <div class="flex-1 pl-8">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Plateforme Communautaire</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Espace d'échange et de mentorat entre entrepreneurs.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Q1 2026 -->
+                        <div class="relative group">
+                            <div class="flex items-center">
+                                <div class="flex-1 text-right pr-8">
+                                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">Q1 2026</h3>
+                                    <p class="text-secondary-600 dark:text-secondary-400">Planifié</p>
+                                </div>
+                                <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white dark:bg-gray-800 rounded-full border-4 border-secondary-500 group-hover:scale-150 transition-transform duration-300"></div>
+                                <div class="flex-1 pl-8">
+                                    <h4 class="font-semibold text-gray-900 dark:text-white">Intégration Marché</h4>
+                                    <p class="text-gray-600 dark:text-gray-300">Connexion directe avec les investisseurs et partenaires potentiels.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
     <!-- Footer -->
     <footer class="bg-gray-50 dark:bg-gray-800" role="contentinfo">
         <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <nav class="grid grid-cols-1 md:grid-cols-3 gap-8" role="navigation" aria-label="Navigation du pied de page">
                 <div>
-                    <h4 class="text-sm font-semibold uppercase text-gray-900 dark:text-white mb-4">À propos</h4>
-                    <ul class="space-y-3">
+                    <h4 id="footer-about" class="text-sm font-semibold uppercase text-gray-900 dark:text-white mb-4">À propos</h4>
+                    <ul class="space-y-3" aria-labelledby="footer-about">
                         <li>
-                            <a href="/qui-sommes-nous" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Qui sommes-nous ?</a>
+                            <a href="/qui-sommes-nous" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg px-2 py-1 -ml-2">En savoir plus sur notre équipe</a>
                         </li>
                         <li>
-                            <a href="/blog" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Blog</a>
+                            <a href="/blog" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg px-2 py-1 -ml-2">Découvrir notre blog</a>
                         </li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-sm font-semibold uppercase text-gray-900 dark:text-white mb-4">Légal</h4>
-                    <ul class="space-y-3">
+                    <h4 id="footer-legal" class="text-sm font-semibold uppercase text-gray-900 dark:text-white mb-4">Légal</h4>
+                    <ul class="space-y-3" aria-labelledby="footer-legal">
                         <li>
-                            <a href="/mentions-legales" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Mentions légales</a>
+                            <a href="/mentions-legales" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg px-2 py-1 -ml-2">Consulter les mentions légales</a>
                         </li>
                         <li>
-                            <a href="/confidentialite" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">Politique de confidentialité</a>
+                            <a href="/confidentialite" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg px-2 py-1 -ml-2">Lire notre politique de confidentialité</a>
                         </li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h4 class="text-sm font-semibold uppercase text-gray-900 dark:text-white mb-4">Contact</h4>
-                    <ul class="space-y-3">
+                    <h4 id="footer-contact" class="text-sm font-semibold uppercase text-gray-900 dark:text-white mb-4">Contact</h4>
+                    <ul class="space-y-3" aria-labelledby="footer-contact">
                         <li>
-                            <a href="mailto:contact@business-idea-generator.com" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">contact@business-idea-generator.com</a>
+                            <a href="mailto:contact@business-idea-generator.com" class="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg px-2 py-1 -ml-2">Nous contacter par email</a>
                         </li>
                     </ul>
                 </div>
@@ -272,6 +494,7 @@
             const btn = document.getElementById('themeToggle');
             if (btn) {
                 btn.setAttribute('aria-pressed', String(isDark));
+                btn.setAttribute('aria-label', isDark ? 'Passer en mode clair' : 'Passer en mode sombre');
             }
         }
         
