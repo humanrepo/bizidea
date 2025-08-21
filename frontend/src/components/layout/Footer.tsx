@@ -1,6 +1,6 @@
+import { Github, Lightbulb, Linkedin, Twitter } from 'lucide-react'
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Lightbulb, Twitter, Linkedin, Github } from 'lucide-react'
 
 const FooterLink = ({ to, children }: { to: string, children: React.ReactNode }) => (
   <Link to={to} className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
@@ -26,7 +26,7 @@ const Footer = () => {
                 <Lightbulb className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold font-heading text-gray-900 dark:text-white">
-                Business Ideas
+                HumanOS BizIdea
               </span>
             </div>
             <p className="text-gray-500 dark:text-gray-400 text-sm">

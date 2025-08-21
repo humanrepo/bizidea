@@ -1,27 +1,26 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import {
-  Lightbulb,
-  Menu,
-  X,
-  Settings,
-  LogOut,
   BarChart3,
-  Users,
+  Lightbulb,
+  LogOut,
+  Menu,
   MessageCircle,
+  Moon,
+  Settings,
   Sparkles,
   Sun,
-  Moon,
   User,
-  Brain
+  Users,
+  X
 } from 'lucide-react'
+import { useEffect, useRef, useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
-import { useAuthStore } from '@/store/authStore'
-import { cn } from '@/lib/utils'
-import { useTheme } from '@/hooks/useTheme'
 import { Button } from '@/components/ui/Button'
-import { trapFocus, KEYS } from '@/lib/a11y'
+import { useTheme } from '@/hooks/useTheme'
+import { KEYS, trapFocus } from '@/lib/a11y'
+import { cn } from '@/lib/utils'
+import { useAuthStore } from '@/store/authStore'
 
 const Navbar = () => {
   const location = useLocation()
@@ -110,7 +109,7 @@ const Navbar = () => {
               <Lightbulb className="w-6 h-6 text-white" />
             </div>
             <span className="text-xl font-bold font-heading text-gray-900 dark:text-white">
-              Business Ideas
+              HumanOS BizIdea
             </span>
           </Link>
 

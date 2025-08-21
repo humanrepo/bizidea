@@ -1,7 +1,7 @@
+import { motion } from 'framer-motion';
+import { Lightbulb } from 'lucide-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Lightbulb } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 interface AuthLayoutProps {
   children: React.ReactNode;
@@ -33,7 +33,7 @@ const AuthLayout: React.FC<AuthLayoutProps> = ({ children, title, description })
           </p>
         </div>
         <div className="absolute bottom-8 text-sm text-gray-500 dark:text-gray-400">
-          © 2025 BizIdea. Tous droits réservés.
+          © 2025 HumanOS BizIdea. Tous droits réservés.
         </div>
       </div>
 
