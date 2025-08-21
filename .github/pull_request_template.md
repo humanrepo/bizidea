@@ -1,81 +1,75 @@
-# 🎯 Description des changements
+# Pull Request - HumanOS BizIdea
 
-## 📝 Résumé
-<!-- Décrivez brièvement les modifications apportées -->
+## 🎯 Type de Changement
+<!-- Cocher la case appropriée -->
+- [ ] ✨ Nouvelle fonctionnalité (feat)
+- [ ] 🐛 Correction de bug (fix)
+- [ ] 📚 Documentation (docs)
+- [ ] 🎨 Style (style)
+- [ ] ♻️ Refactorisation (refactor)
+- [ ] ⚡ Performance (perf)
+- [ ] 🧪 Tests (test)
+- [ ] 🔧 Maintenance (chore)
 
-## 🖼 Screenshots
-<!-- Ajoutez des captures d'écran avant/après -->
+## 📋 Description
+<!-- Décrivez brièvement les changements apportés -->
 
-| Avant | Après |
-|-------|-------|
-| [image] | [image] |
+## 🔗 Issues Liées
+<!-- Référencez les issues GitHub concernées -->
+Fixes # 
+Related to #
 
-## 🔍 Type de changement
-- [ ] 🎨 Frontend Refactor
-- [ ] ♿️ Accessibilité
-- [ ] 🌓 Dark Mode
-- [ ] 📱 Responsive Design
-- [ ] 🔍 SEO
-- [ ] 📚 Documentation
+## 🧪 Tests Effectués
+<!-- Décrivez les tests que vous avez effectués -->
+- [ ] ✅ Tests unitaires
+- [ ] ✅ Tests d'intégration
+- [ ] ✅ Tests d'accessibilité
+- [ ] ✅ Tests de performance
+- [ ] ✅ Tests responsive design
+- [ ] ✅ Vérification cross-browser
 
-## 🏗 Structure HTML & SEO
-- [ ] HTML sémantique (header, nav, main, section, footer)
-- [ ] Balises meta complètes et pertinentes
-- [ ] Title unique et descriptif
-- [ ] Hiérarchie des titres logique (h1 > h2 > h3)
-- [ ] Alt text pour toutes les images
-- [ ] Schema.org si pertinent
+## 📸 Captures d'Écran
+<!-- Ajoutez des captures si applicable -->
 
-## ♿️ Accessibilité
-- [ ] Labels explicites sur les éléments interactifs
-- [ ] ARIA landmarks et rôles appropriés
-- [ ] Focus visible et logique
-- [ ] Contrastes vérifiés (WCAG AA)
-- [ ] Navigation au clavier testée
-- [ ] Messages d'état pour lecteurs d'écran
+### Avant
+<!-- Capture avant les changements -->
 
-## 📱 Responsive Design
-- [ ] Mobile first (< 640px)
-- [ ] Tablette (640px - 1024px)
-- [ ] Desktop (> 1024px)
-- [ ] Menu hamburger fonctionnel
-- [ ] Grilles/flex adaptatives
-- [ ] Images responsives
+### Après
+<!-- Capture après les changements -->
 
-## 🌓 Dark Mode
-- [ ] Toggle accessible
-- [ ] Persistance des préférences
-- [ ] Contrastes vérifiés dans les deux modes
-- [ ] Transitions fluides
-- [ ] Media query fallback
+## 📊 Métriques
+<!-- Si applicable, ajoutez des métriques -->
 
-## 🚀 Performance
-- [ ] Images optimisées
-- [ ] Lazy loading configuré
-- [ ] CSS minimal
-- [ ] JS non-bloquant
-- [ ] Cache configuré
+- **Performance Lighthouse**: 
+- **Accessibilité Score**: 
+- **SEO Score**: 
+- **Best Practices**: 
+
+## ✅ Checklist
+- [ ] Mon code suit les guidelines du projet
+- [ ] J'ai effectué une auto-review de mon code
+- [ ] J'ai commenté mon code si nécessaire
+- [ ] J'ai mis à jour la documentation
+- [ ] Les tests passent localement
+- [ ] J'ai vérifié l'accessibilité
+- [ ] J'ai testé sur mobile et desktop
+
+## 🚀 Déploiement Notes
+<!-- Notes spécifiques au déploiement -->
 
 ## 📚 Documentation
-- [ ] README mis à jour
-- [ ] Commentaires de code pertinents
-- [ ] Variables/classes bien nommées
-- [ ] Guide de contribution à jour
+<!-- Lien vers la documentation mise à jour -->
 
-## ✅ Tests effectués
-- [ ] Chrome
-- [ ] Firefox
-- [ ] Safari
-- [ ] Edge
-- [ ] Mobile Safari
-- [ ] Chrome Mobile
+## 🔧 Configuration Requise
+<!-- Dépendances ou configuration spécifique -->
 
-## 🔄 Breaking Changes
-- [ ] Non
-- [ ] Oui (détaillez ci-dessous)
+## 👥 Reviewers
+<!-- Mentionnez les personnes à reviewer -->
+@mayele @
 
-## 📋 Notes pour les reviewers
-<!-- Points spécifiques à examiner, décisions de design, etc. -->
+## ⚠️ Notes Importantes
+<!-- Informations importantes pour les reviewers -->
 
-## 📦 Impact sur le déploiement
-<!-- Changements nécessaires pour le déploiement, nouvelles dépendances, etc. -->
+---
+
+*PR créée le: $(date +%Y-%m-%d)*
