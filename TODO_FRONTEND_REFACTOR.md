@@ -1,111 +1,112 @@
-# 🎯 Frontend Refactor Checklist - HumanOS World
+# 🎯 Frontend Refactor Checklist - HumanOS BizIdea
 
-## 📋 Team Workflow Rules
-- ✅ **Never push directly to main**
-- ✅ **All changes via PR**: `frontend-refactor` → `dev` → `main`
-- ✅ **Commit conventions**: `feat:`, `fix:`, `docs:`, `refactor:`, `style:`, `chore:`
-- ✅ **PR Requirements**: Title format, description with screenshots, assign reviewers
+## ✅ Git Workflow Setup (Completed)
+- [x] Created `frontend-refactor` branch
+- [x] Established Git collaboration workflow with Mayele
+- [x] Created PR template and documentation
+- [x] Set up VSCode configuration and snippets
 
-## 🔄 Current Branch: `frontend-refactor`
-**Last Commit**: `feat(frontend): refactor UI + SEO + a11y`
+## ✅ Phase 1: Branding & Design System Unification (Completed)
+- [x] **Standardize Branding**: Updated all instances to "HumanOS BizIdea" consistently across Navbar, Footer, and AuthLayout
+- [ ] **Color Palette Enhancement**: Refine Tailwind colors for better accessibility
+- [ ] **Typography System**: Enhance font hierarchy and French typography optimization
+- [ ] **Component Library**: Create comprehensive storybook for reusable components
 
-## ✅ Capstone Checklist - Frontend Refactor
+## 🎯 Phase 2: Accessibility & Performance (WCAG 2.1)
+- [ ] **Color Contrast Audit**: Ensure all colors meet WCAG AA (4.5:1) standards
+- [ ] **Keyboard Navigation**: Complete tab navigation with visual focus indicators
+- [ ] **Screen Reader Optimization**: Enhanced ARIA labels and live regions
+- [ ] **Performance Optimization**: Image optimization, code splitting, lazy loading
 
-### 1. HTML Sémantique
-- [ ] Header/Nav/Main/Section/Footer structure
-- [ ] Proper landmark roles and ARIA labels
-- [ ] Semantic HTML5 elements throughout
+## 🎨 Phase 3: Modern UX Enhancements
+- [ ] **Micro-animations**: Framer Motion integration for smooth transitions
+- [ ] **Storytelling Section**: "Why HumanOS?" section with compelling narrative
+- [ ] **Interactive Roadmap**: Vision board for user engagement
+- [ ] **Loading States**: Enhanced skeleton screens and loading animations
 
-### 2. SEO Optimization
-- [ ] Unique `<title>` per page
-- [ ] Meta descriptions for each page
-- [ ] Proper H1-H3 hierarchy
-- [ ] Alt text for all images
-- [ ] Structured data (JSON-LD)
-- [ ] Sitemap.xml
+## 📱 Phase 4: Technical Implementation
+- [ ] **SEO Optimization**: Meta tags, structured data, and sitemap
+- [ ] **PWA Features**: Service worker, offline support, app manifest
+- [ ] **Internationalization**: Complete French translations (i18n)
+- [ ] **Responsive Design**: Mobile-first optimization
 
-### 3. Accessibilité (WCAG 2.1)
-- [ ] ARIA labels where needed
-- [ ] Visible focus indicators
-- [ ] Color contrast ratios (4.5:1 minimum)
-- [ ] Keyboard navigation complete
-- [ ] Screen reader announcements
-- [ ] Form labels and error messages
-- [ ] Skip to content link
+## 🧪 Phase 5: Testing & Quality
+- [ ] **Unit Tests**: Jest + React Testing Library setup
+- [ ] **E2E Tests**: Cypress integration
+- [ ] **Accessibility Tests**: axe-core integration
+- [ ] **Performance Tests**: Lighthouse audits
 
-### 4. Responsive Design
-- [ ] Mobile-first approach
-- [ ] Flexbox/Grid layout
-- [ ] Tailwind breakpoints optimized
-- [ ] Touch-friendly interactions
-- [ ] Cross-browser testing
+## 🚀 Phase 6: Deployment & Monitoring
+- [ ] **GitHub Pages Deployment**: Automated deployment pipeline
+- [ ] **Analytics Integration**: User behavior tracking
+- [ ] **Error Monitoring**: Sentry or similar integration
+- [ ] **Documentation**: Updated README and deployment guides
 
-### 5. Dark/Light Mode
-- [ ] Toggle with localStorage persistence
-- [ ] Respects `prefers-color-scheme`
-- [ ] Accessible toggle (aria-pressed)
-- [ ] Consistent theming across components
+## 📋 Files to Refactor
 
-### 6. Mobile Navigation
-- [ ] Hamburger menu for mobile
-- [ ] Focus trap when menu open
-- [ ] Escape key to close
-- [ ] Accessible mobile navigation
+### Core Components:
+- `frontend/src/components/layout/Navbar.tsx` - Branding unification
+- `frontend/src/components/layout/Footer.tsx` - Branding and links update
+- `frontend/src/pages/EnhancedHomePage.tsx` - Add storytelling section
 
-### 7. Performance
-- [ ] Images optimized (WebP, responsive)
-- [ ] Lazy loading for images/components
-- [ ] Minimal CSS/JS bundles
-- [ ] Code splitting implemented
-- [ ] Lighthouse score >90
+### Design System:
+- `frontend/tailwind.config.js` - Design system enhancements
+- `frontend/src/styles/design-tokens-enhanced.css` - Color system refinement
+- `frontend/src/App.tsx` - PWA and performance optimizations
 
-### 8. Documentation
-- [ ] README updated with changes
-- [ ] Deployment instructions
-- [ ] Component documentation
+### Configuration:
+- `frontend/vite.config.ts` - Build optimizations
+- `frontend/package.json` - Dependency updates
 
-### 9. Déploiement
-- [ ] GitHub Pages configuration
-- [ ] Netlify/Vercel setup
-- [ ] CI/CD pipeline
+## 🔧 Technical Requirements
 
-## 📁 Files to Refactor
+### HTML Semantics:
+- [ ] Semantic HTML5 tags (header/nav/main/section/footer)
+- [ ] Proper heading hierarchy (h1 > h2 > h3)
+- [ ] Image alt attributes
+- [ ] Descriptive link text
 
-### Priority 1: Core Components
-- [ ] `src/components/layout/Navbar.tsx` - Branding + mobile nav
-- [ ] `src/components/layout/Footer.tsx` - Branding + links
-- [ ] `src/pages/EnhancedHomePage.tsx` - SEO + accessibility
+### SEO:
+- [ ] Unique page titles
+- [ ] Meta descriptions
+- [ ] Open Graph tags
+- [ ] Structured data
 
-### Priority 2: Design System
-- [ ] `tailwind.config.js` - Color system + dark mode
-- [ ] `src/styles/design-tokens-enhanced.css` - CSS variables
-- [ ] `src/lib/a11y.ts` - Accessibility utilities
+### Accessibility:
+- [ ] ARIA landmarks and labels
+- [ ] Focus management
+- [ ] Color contrast compliance
+- [ ] Keyboard navigation
 
-### Priority 3: App Structure
-- [ ] `src/App.tsx` - Routing + providers
-- [ ] `index.html` - Meta tags + SEO
-- [ ] `vite.config.ts` - Build optimizations
+### Performance:
+- [ ] Image optimization (WebP, lazy loading)
+- [ ] Code splitting
+- [ ] Bundle size optimization
+- [ ] Core Web Vitals optimization
 
-## 🚀 Next Steps
+## 🎯 Next Steps
 
-1. **Create PR**: `feat(frontend): improve navbar + dark mode`
-2. **Assign Reviewers**: @Mayele
-3. **Include**: Before/after screenshots
-4. **Test**: Cross-browser + accessibility testing
-5. **Deploy**: Preview deployment for testing
+1. **Start with Phase 1**: Branding unification and design system
+2. **Create PR for each major component**: Navbar → Footer → Homepage
+3. **Test accessibility**: Run axe-core audits after each change
+4. **Performance testing**: Lighthouse audits after optimizations
+5. **Document changes**: Update README with each PR
 
-## 📊 Progress Tracking
+## 📝 Git Commit Convention
 
-| Task | Status | PR Link |
-|------|--------|---------|
-| Navbar Refactor | 🔄 In Progress | - |
-| Dark Mode Toggle | ⏳ Pending | - |
-| SEO Optimization | ⏳ Pending | - |
-| Accessibility Audit | ⏳ Pending | - |
+```bash
+feat: add new feature
+fix: bug fix
+docs: documentation changes
+style: code formatting, no logic changes
+refactor: code restructuring, no behavior changes
+test: adding tests
+chore: maintenance tasks
+```
 
-## 🎯 Success Metrics
-- ✅ Lighthouse Score: Performance >90, Accessibility >95
-- ✅ WCAG 2.1 AA Compliance
-- ✅ Mobile Responsive
-- ✅ Cross-browser Compatible
-- ✅ French Language Support
+## 🔗 Related Documentation
+
+- [Git Workflow Cheatsheet](./GIT_WORKFLOW_CHEATSHEET.md)
+- [Frontend Collaboration Plan](./FRONTEND_COLLABORATION_PLAN.md)
+- [Quick Start Guide](./QUICK_START_FRONTEND.md)
+- [PR Template](./.github/PULL_REQUEST_TEMPLATE.md)
